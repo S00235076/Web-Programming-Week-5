@@ -2,7 +2,21 @@
 <div class="container">
       <h1>Movie Favourites Oran Carter S00235076</h1>
       <app-add-movie></app-add-movie>
-      <app-list-movies></app-list-movies>
+     
 
      </div>
+
+     <div class = "container p-0">
+<div class ="row">
+      <div class = "col-sm-6">
+            <app-list-movies (onSelectedMovie)="setSelectedMovie($event)"></app-list-movies>
+
+      </div>
+
+      <div class = "col-sm-6">
+            <app-movie-detail [movieDetails] = "mySelectedMovie"></app-movie-detail>
+      </div>
+</div>
+
+     
   
